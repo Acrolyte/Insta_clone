@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="85dp"
+        android:layout_height="85dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_userdp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            app:shapeAppearanceOverlay="@style/Circular"
+            android:src="@drawable/img1"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rl_top"
+        android:fontFamily="sans-serif-black"
+        android:text="Planet-1"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+</RelativeLayout>
