@@ -61,7 +61,7 @@ class MainScreen : Fragment() {
         val statusAdapter = StatusAdapter(statuslist)
         statusrecyclerview = binding.rvStatusbar
         statusrecyclerview.setHasFixedSize(true)
-        statusrecyclerview.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,true)
+        statusrecyclerview.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL,false)
         statusrecyclerview.adapter = statusAdapter
 
         val postadapter = PostAdapter(userlist)

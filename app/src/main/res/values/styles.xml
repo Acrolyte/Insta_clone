@@ -3,4 +3,9 @@
     <style name="Circular">
         <item name="cornerSize">50%</item>
     </style>
+    <style name="Status_circle">
+        <item name="cornerSize">50%</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">10dp</item>
+    </style>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,13 +17,13 @@
             <RelativeLayout
                 android:id="@+id/tb_above_post"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:background="@color/white">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/iv_userdp"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/img1"
@@ -40,11 +39,11 @@
                     android:fontFamily="sans-serif-black"
                     android:text="Planet-1"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="10dp"
@@ -60,6 +59,7 @@
                 android:src="@drawable/img1" />
 
             <RelativeLayout
+                android:id="@+id/rl_mid"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/iv_post"
@@ -70,25 +70,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="10dp">
+                    android:layout_marginHorizontal="6dp">
 
                     <ImageView
                         android:id="@+id/iv_heart"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/heart_unliked" />
 
                     <ImageView
                         android:id="@+id/iv_comment"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_toEndOf="@+id/iv_heart"
                         android:src="@drawable/comment" />
 
                     <ImageView
                         android:id="@+id/iv_send"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_toEndOf="@+id/iv_comment"
                         android:src="@drawable/send" />
 
@@ -96,8 +96,8 @@
 
                 <ImageView
                     android:id="@+id/iv_bookmark"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginHorizontal="10dp"
@@ -105,8 +105,128 @@
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:id="@+id/ll_likeandcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_mid"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Liked by " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="profile_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" and " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="23 others" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="profile_name " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="post caption here" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View all 23 comments" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/ll_likeandcomment"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_dpbelow"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/img1"
+                    app:shapeAppearanceOverlay="@style/Circular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toEndOf="@id/iv_dpbelow"
+                    android:text="Add a comment..."
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+
+                    <ImageView
+                        android:id="@+id/iv_emo1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:src="@drawable/red_heart" />
+
+                    <ImageView
+                        android:id="@+id/iv_emo2"
+                        android:layout_width="16dp"
+                        android:layout_height="24dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_toEndOf="@id/iv_emo1"
+                        android:src="@drawable/raising_hands" />
+
+                    <ImageView
+                        android:id="@+id/iv_addcirle"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_toEndOf="@id/iv_emo2"
+                        android:src="@drawable/ic_addcircle" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
         </RelativeLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
+
 
 </RelativeLayout>

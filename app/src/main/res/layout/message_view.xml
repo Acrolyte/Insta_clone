@@ -5,21 +5,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginVertical="5dp">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_userdp"
-        app:shapeAppearanceOverlay="@style/Circular"
+    <RelativeLayout
+        android:id="@+id/rl_top"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/img1" />
+        android:layout_marginStart="6dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/instagram_grad"
+            app:shapeAppearanceOverlay="@style/Circular"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            app:shapeAppearanceOverlay="@style/Circular"
+            android:background="@color/white"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_userdp"
+            app:shapeAppearanceOverlay="@style/Circular"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img1" />
+
+        <RelativeLayout
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentEnd="true"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shapeAppearanceOverlay="@style/Circular"
+                android:background="@color/white"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                app:shapeAppearanceOverlay="@style/Circular"
+                android:background="@color/active_green"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/iv_userdp">
+        android:layout_toEndOf="@+id/rl_top">
 
         <TextView
             android:id="@+id/tv_username"
@@ -28,7 +72,7 @@
             android:fontFamily="sans-serif-black"
             android:text="Planet-1"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_usertime"
@@ -36,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_username"
             android:text="Active 3h ago"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </RelativeLayout>
 
